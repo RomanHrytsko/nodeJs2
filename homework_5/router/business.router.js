@@ -5,7 +5,7 @@ const { businessMiddleware } = require('../middleware');
 
 router.get('/', businessController.getAllBusinessTypes);
 
-router.get('/', businessController.getSingleBusinessType);
+router.get('/:businessId', businessMiddleware.isIdValid, businessController.getSingleBusinessType);
 
 router.post('/', businessMiddleware.isBusinessAccValid, businessController.createBusinessType);
 

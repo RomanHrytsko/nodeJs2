@@ -1,3 +1,3 @@
 module.exports = {
-    creteUserValidator: require('./createUser.validator')
+    creteUserValidator: require('./createUser.validator'),
 };
