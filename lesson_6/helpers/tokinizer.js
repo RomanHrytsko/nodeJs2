@@ -1,15 +1,12 @@
 const jwt = require('jsonwebtoken');
+const { JWT_SECRET, JWT_REFRESH_SECRET } = require('../configs/config');
 
 module.exports = () => {
-    const access_token = jwt.sign({}, 'JWT_SECRET', { expiresIn: '30m' });
-    const refresh_token = jwt.sign({}, 'JWT_REFRESH', { expiresIn: '30d' });
+    const access_token = jwt.sign({}, JWT_SECRET, { expiresIn: '30m' });
+    const refresh_token = jwt.sign({}, JWT_REFRESH_SECRET, { expiresIn: '30d' });
 
     return {
         access_token,
         refresh_token
     };
 };
-// {
-//     "password": "asdasad323s@43D" ,
-//     "email": "rolwadwadik@gmail.com"
-// }

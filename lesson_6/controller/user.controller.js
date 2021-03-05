@@ -49,6 +49,9 @@ module.exports = {
 
             const { userId } = req.body;
 
+            if (userId !== req.user._id) {
+                throw new Error('Unauthorized');
+            }
             await userService.deleteUser(userId);
 
             res.status(codesStatusEnum.DONE).json(success.USER_IS_DELETED[preferL]);

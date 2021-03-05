@@ -26,5 +26,21 @@ module.exports = {
     EMAIL_ALREADY_EXIST: {
         en: 'Email like this is already exist',
         ua: 'Така електронна адреса вже існує'
+    },
+    UNAUTHORIZED: {
+        en: 'Unauthorized',
+        ua: 'Ви не авторизувались'
+    },
+    TOKEN_IS_REQUIRED: {
+        en: 'Token is required',
+        ua: 'Токен не отримано'
+    },
+    NOT_VALID_TOKEN: {
+        en: 'Not valid token',
+        ua: 'Не валідний токен'
+    },
+    NO_USER: {
+        en: 'No user',
+        ua: 'Користувача не існує'
     }
 };
